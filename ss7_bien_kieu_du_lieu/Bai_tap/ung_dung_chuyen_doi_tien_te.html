@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="1">Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="Sl"></td>
+        <td>
+            <select name="donvi">
+                <option id="VND" value="VND">VietNam</option>
+            </select>
+        </td>
+        <td>
+            <select name="donvi2">
+                <option id="USD" value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="Exchange()">Convert</button>
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td><p>Result</p></td>
+        <td><div id="Result"></div></td>
+    </tr>
+</table>
+<script>
+    function Exchange() {
+        let vnd = parseFloat(document.getElementById("VND").value);
+        let usd = parseFloat(document.getElementById("USD").value);
+        let amount = parseFloat(document.getElementById("Sl").value);
+        let exchange = amount / 23000;
+        document.getElementById("Result").innerHTML= exchange;
+    }
+</script>
+</body>
+</html>
