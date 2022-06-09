@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+</body>
+<script>
+    let firstOperand = parseFloat(prompt("Nhập sô A:"));
+    let secondOperand = parseFloat(prompt("Nhập sô B:"));
+    let thirdOperand = parseFloat(prompt("Nhập sô C:"));
+    let delta= Math.pow(secondOperand,2) - 4 * firstOperand * thirdOperand
+    if (delta<0){
+        alert("Phương trình vô nghiệm.");
+    }else if (delta=0){
+        alert("Phương trình có nghiệm kép x1 = x2 " + -secondOperand / 2* firstOperand);
+    }else {
+        let rootOfAnEquation1= (-secondOperand + Math.sqrt(delta)) / 2 * firstOperand
+        let rootOfAnEquation2= (-secondOperand - Math.sqrt(delta)) / 2 * firstOperand
+        alert("Phương trình có hai nghiệm x1 = " + rootOfAnEquation1 + "và x2 =" +rootOfAnEquation2);
+    }
+</script>
+</html>

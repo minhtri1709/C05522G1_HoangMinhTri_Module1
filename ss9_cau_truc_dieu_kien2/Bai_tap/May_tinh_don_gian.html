@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td colspan="4"><input type="text" id="show"></td>
+    </tr>
+    <tr>
+        <td>
+            <button value="1" type="button" onclick="inputValue(this.value)">1</button>
+        </td>
+        <td>
+            <button value="2" type="button" onclick="inputValue(this.value)">2</button>
+        </td>
+        <td>
+            <button value="3" type="button" onclick="inputValue(this.value)">3</button>
+        </td>
+        <td>
+            <button value="+" type="button" onclick="inputValue(this.value)">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button value="4" type="button" onclick="inputValue(this.value)">4</button>
+        </td>
+        <td>
+            <button value="5" type="button" onclick="inputValue(this.value)">5</button>
+        </td>
+        <td>
+            <button value="6" type="button" onclick="inputValue(this.value)">6</button>
+        </td>
+        <td>
+            <button value="-" type="button" onclick="inputValue(this.value)">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button value="7" type="button" onclick="inputValue(this.value)">1</button>
+        </td>
+        <td>
+            <button value="8" type="button" onclick="inputValue(this.value)">2</button>
+        </td>
+        <td>
+            <button value="9" type="button" onclick="inputValue(this.value)">3</button>
+        </td>
+        <td>
+            <button value="x" type="button" onclick="inputValue(this.value)">x</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button value="C" type="button" onclick="remove()">C</button>
+        </td>
+        <td>
+            <button value="0" type="button" onclick="inputValue(this.value)">0</button>
+        </td>
+        <td>
+            <button value="=" type="button" onclick="calculate()">=</button>
+        </td>
+        <td>
+            <button value="/" type="button" onclick="inputValue(this.value)">/</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function inputValue(value) {
+        document.getElementById("show").value += value;
+    }
+
+    function calculate() {
+        let result = document.getElementById("show").value;
+        document.getElementById("show").value = eval(result);
+
+
+    }
+
+    function remove() {
+        document.getElementById("show").value = "";
+    }
+</script>
+</body>
+</html>

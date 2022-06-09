@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 12</title>
+</head>
+<body>
+</body>
+<script>
+    let money= parseFloat(prompt("Nhập số tiền gửi" ));
+    let interestRate= alert("Lãi suất 7%/12 tháng." );
+    let day= parseFloat(prompt("Số ngày thực gửi:" ));
+    if(day>=365){
+        alert("Số tiền lãi suất" + money * 7 / 100)
+    }else {
+        alert("Số tiền lãi suất" + money * 5 / 100 / 360 * day)
+    }
+</script>
+</html>

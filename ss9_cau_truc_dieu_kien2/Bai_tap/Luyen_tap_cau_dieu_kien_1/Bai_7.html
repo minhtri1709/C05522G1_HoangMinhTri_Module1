@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+</body>
+<script>
+    let minute=parseFloat(prompt("Nhập số phút đã gọi:"));
+    if (minute < 10){
+        let money=minute*1000
+        alert("Số tiền phải trả:" + money + "VND");
+    } else if (minute < 20){
+        let money=minute*2000
+        alert("Số tiền phải trả:" + money + "VND");
+    }else {
+        let money=minute*3000
+        alert("Số tiền phải trả:" + money + "VND");
+    }
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+</body>
+<script>
+    let firstOperand = parseFloat(prompt("Nhập sô A:"));
+    let secondOperand = parseFloat(prompt("Nhập sô B:"));
+    if (firstOperand == 0 && secondOperand == 0) {
+        alert("Phương trình có vô số nghiệm.");
+    } else if (firstOperand == 0 && secondOperand > 0 || secondOperand < 0) {
+        alert("Phương trình vô nghiệm.");
+    } else if (firstOperand < 0 || firstOperand > 0) {
+        let rootOfAnEquation = -secondOperand / firstOperand
+        alert("Phương trình có nghiệm duy nhất: " + rootOfAnEquation)
+    }
+</script>
+</html>

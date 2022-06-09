@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+</body>
+<script>
+    let sideA = parseFloat(prompt("Nhập chiều dài cạnh A:"));
+    let sideB = parseFloat(prompt("Nhập chiều dài cạnh B:"));
+    let sideC = parseFloat(prompt("Nhập chiều dài cạnh C:"));
+    if (sideA > 0 && sideB > 0 && sideC > 0) {
+        if (sideA + sideB > sideC && sideB + sideC >sideA && sideA + sideC > sideB){
+            alert("A,B,C là 3 cạnh của tam giác.")
+        }else {
+            alert("A,B,C không phải là 3 cạnh của tam giác.")
+        }
+    } else {
+        alert("A,B,C không phải là 3 cạnh của tam giác.");
+    }
+
+
+</script>
+</html>

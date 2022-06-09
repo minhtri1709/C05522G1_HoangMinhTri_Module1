@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let username = prompt("Nhập ID:");
+    if (username == "Admin") {
+        let password = prompt("Nhập Password:");
+        if (password == "TheMaster") {
+            alert("Welcome");
+        }else if (password == null) {
+                alert("Canceld");
+            }
+        else {
+            alert("Wrong password");
+        }
+    } else if (username == null){
+        alert("Canceld");
+    } else {
+    alert("I don't know you");
+    }
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+<body>
+</body>
+<script>
+    let income = parseInt(prompt("Nhập thu nhập của bản thân:"));
+    let rank1 =income <= 5000000;
+    let rank2 =income <= 10000000 ;
+    let rank3 =income <= 18000000;
+    let rank4 =income <= 32000000;
+    let rank5 =income <= 52000000;
+    let rank6 =income <= 80000000;
+    switch (true) {
+        case rank1:
+            alert("Thuế TTCN của bạn:" + income * 0.05 + "VND");
+            break;
+        case rank2:
+            alert("Thuế TTCN của bạn:" + income * 0.1 + "VND");
+            break;
+        case rank3:
+            alert("Thuế TTCN của bạn:" + income * 0.15 + "VND");
+            break;
+        case rank4:
+            alert("Thuế TTCN của bạn:" + income * 0.2 + "VND");
+            break;
+        case rank5:
+            alert("Thuế TTCN của bạn:" + income * 0.25 + "VND");
+            break;
+            case rank6:
+            alert("Thuế TTCN của bạn:" + income * 0.3 + "VND");
+            break;
+        default:
+            alert("Thuế TTCN của bạn:" + income * 0.35 + "VND")
+
+    }
+</script>
+</html>

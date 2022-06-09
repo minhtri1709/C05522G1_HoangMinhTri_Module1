@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+</body>
+<script>
+    let consumption = parseInt(prompt("Nhập số điện tiêu thụ:"));
+    let rank1 =consumption <= 50;
+    let rank2 =consumption <= 51 ;
+    let rank3 =consumption <= 101;
+    let rank4 =consumption <= 201;
+    let rank5 =consumption <= 301;
+    switch (true) {
+        case rank1:
+            alert("Tiền điện của bạn:" + consumption * 1678 + "VND");
+            break;
+        case rank2:
+            alert("Tiền điện của bạn:" + consumption * 1734 + "VND");
+            break;
+        case rank3:
+            alert("Tiền điện của bạn:" + consumption * 2014 + "VND");
+            break;
+        case rank4:
+            alert("Tiền điện của bạn:" + consumption * 2536 + "VND");
+            break;
+        case rank5:
+            alert("Tiền điện của bạn:" + consumption * 2834 + "VND");
+            break;
+        default:
+            alert("Tiền điện của bạn:" + consumption * 2927 + "VND")
+
+    }
+</script>
+</html>
