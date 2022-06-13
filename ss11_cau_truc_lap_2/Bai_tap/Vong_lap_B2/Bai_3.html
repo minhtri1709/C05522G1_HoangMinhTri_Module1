@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In các tam giác</title>
+</head>
+<body>
+<script>
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    for (let i = 5; i >= 1; i--) {
+        for (let j = 1; j <= i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    let sout;
+    sout = "<table>"
+    for (i = 1; i <= 5; i++) {
+        sout = sout + "<tr>";
+        for (j = 1; j <= 5; j++) {
+            if (j <= 5 - i) {
+                sout = sout + "<td>" + "</td>";
+            }else {
+                sout = sout + "<td>" + "*" + "</td>";
+            }
+        }
+        sout = sout + "</tr>";
+    }
+    sout = sout + "</table>";
+    document.write("<br>");
+    let sout1 = "<table>";
+    for (let i=1; i<=5; i++) {
+        sout1 += "<tr>";
+        for (let j=1; j<=5; j++) {
+            if (j<i) {
+                sout1 += "<td>" + "</td>";
+            }
+            else {
+                sout1 += "<td>" + "*" + "</td>";
+            }
+        }
+        sout1 += "</tr>";
+    }
+    sout1 += "</table>";
+    document.write(sout1);
+</script>
+</body>
+</html>

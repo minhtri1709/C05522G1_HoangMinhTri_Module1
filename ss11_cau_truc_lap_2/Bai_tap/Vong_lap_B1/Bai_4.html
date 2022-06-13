@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số chia hết cho 5 trong dãy Fibonacci</title>
+</head>
+<body>
+<script>
+    let number1 = 0;
+    let number2 = 1;
+    let nextTerm = 0;
+    for (let i = 0; i < 1000; i++) {
+        nextTerm = number1 + number2;
+        if (nextTerm % 5 == 0) {
+            document.write("Đây là số chia hết cho 5:" + nextTerm + "<br>");
+        }
+        number1 = number2;
+        number2 = nextTerm;
+    }
+</script>
+
+</body>
+</html>

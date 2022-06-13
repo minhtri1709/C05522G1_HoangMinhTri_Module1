@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button onclick="guessNumber()">Bắt đầu</button>
+<script>
+    function guessNumber() {
+        let min = parseInt(prompt("Số bạn muốn trong khoảng từ:"));
+        let max = parseInt(prompt("Số bạn muốn trong khoảng đến:"));
+        let randomNumber = Math.floor(Math.random() * (max - min + 1));
+        let i = 0;
+        while (i < 3) {
+            let guessNumber = parseInt(prompt("Số bạn đoán:"));
+            if (randomNumber == guessNumber) {
+                alert("Chúc mừng bạn đã đoán đúng");
+            } else if (randomNumber > guessNumber) {
+                alert("Số bạn nhập nhỏ hơn.");
+            } else if (randomNumber < guessNumber) {
+                alert("Số bạn nhập lơn hơn.");
+            }
+            i++;
+        }
+        if(i==3){
+            alert("Bạn hết lượt doán.");
+        }
+    }
+
+</script>
+</body>
+</html>
