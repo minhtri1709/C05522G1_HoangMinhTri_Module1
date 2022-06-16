@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [10, 21, 32, 15];
+    let first = 0;
+    let last = number.length - 1;
+    for (let i = 0; i < number.length; i++) ;{
+        let b = number[last];
+        number[first] = number[last];
+        number[last] = b;
+        first++;
+        last--;
+    }document.write(number);
+</script>
+</body>
+</html>

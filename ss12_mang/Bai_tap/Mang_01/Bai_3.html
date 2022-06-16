@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [10, 35, 25, 15, 25, 5, 20];
+    let maxNumber = number[0];
+    let average;
+    let total = 0;
+    for (let i = 0; i < number.length; i++){
+        total += number[i];
+        // console.log(number[i]);
+        average = total / number.length;
+        if (maxNumber < number[i]) {
+            maxNumber = number[i];
+        }
+    }
+    document.write(average + "<br>");
+    document.write(maxNumber);
+</script>
+</body>
+</html>

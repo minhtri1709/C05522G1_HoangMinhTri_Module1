@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let number = parseFloat(prompt("Input Number: "));
+    // for (let i = 0; i < array.length; i++) {
+    //     if (number === array[i]) {
+    //         while (i          < array.length - 1) {
+    //             let mix = array[i];
+    //             array[i] = array[i + 1];
+    //             array[i + 1] = mix;
+    //             i++;
+    //         }
+    //     }array[array.length - 1]=0;
+    //     document.write("Array after change:" + array);
+    // }
+    let index = -1;
+    for (let i = 0; i < array.length; i++) {
+        if (number === array[i]) {
+            index = i;
+            break;
+        }else {
+            alert("Số không nằm trong dãy số đã cho.;")
+        }
+    }
+
+    for (let z = index; z < array.length - 1; z++) {
+        array[z] = array[z + 1];
+    }
+
+    array[array.length - 1] = 0;
+    document.write(array);
+
+</script>
+</body>
+</html>
