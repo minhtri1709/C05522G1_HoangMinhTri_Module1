@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên giá trị nhỏ nhất</title>
+</head>
+<body>
+<script>
+    function compare() {
+        var min = 0;
+        if (numberA <= numberB && numberB <= numberC) {
+            min = numberA;
+            return min;
+        } else if (numberA <= numberB && numberB <= numberC) {
+            min = numberB;
+            return min;
+        } else {
+            min = numberC;
+            return min;
+        }
+    }
+    let numberA = parseFloat(prompt("Input number A: "));
+    let numberB = parseFloat(prompt("Input number B: "));
+    let numberC = parseFloat(prompt("Input number C: "));
+    let result = compare();
+    document.write("Min is: " + result);
+
+
+</script>
+</body>
+</html>

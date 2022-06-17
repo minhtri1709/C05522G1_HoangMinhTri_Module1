@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ hai số nguyên</title>
+</head>
+<body>
+<script>
+    function change(a,b) {
+        var temp = a;
+        a = b;
+        b = temp;
+        document.write(a, b);
+    }
+
+    let inputA = parseFloat(prompt("Input Number 1: "));
+    let inputB = parseFloat(prompt("Input Number 2: "));
+    let result = change(inputA,inputB);
+</script>
+</body>
+</html>

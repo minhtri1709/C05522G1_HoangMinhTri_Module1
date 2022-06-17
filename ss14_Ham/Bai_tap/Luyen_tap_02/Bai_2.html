@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích, chu vi hình tròn </title>
+</head>
+<body>
+<script>
+    function calPerimeter(a) {
+        let perimeter = a * 2 * Math.PI
+        return perimeter;
+    }
+
+    function calArea(a) {
+        let area = a * a * Math.PI
+        return area;
+    }
+
+    let radius = parseFloat(prompt("Input Radius:"));
+    let perimeter = calPerimeter(radius);
+    let area = calArea(radius);
+    document.write("Perimeter of circle is: "  + perimeter + "<br>");
+    document.write("Area of circle is:" + " " + area);
+
+</script>
+</body>
+</html>

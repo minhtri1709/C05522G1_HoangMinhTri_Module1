@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So sánh tham số</title>
+</head>
+<body>
+<script>
+    function compare() {
+
+        if(number1 > number2){
+            alert("Value of Number 1 is elder Number 2. ");
+        }else {
+            let total = number1 + number2;
+            return total;
+        }
+    }
+    let number1 = parseFloat(prompt("Input 1st Number:"));
+    let number2 = parseFloat(prompt("Input 2nd Number:"));
+    let result = compare();
+    document.write("Total of 2 Number is:" + " " + result);
+</script>
+</body>
+</html>

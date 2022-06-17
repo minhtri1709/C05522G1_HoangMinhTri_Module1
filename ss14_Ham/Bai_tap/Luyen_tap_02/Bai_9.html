@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự trong mảng</title>
+</head>
+<body>
+<script>
+    function check(cha, arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (cha === arr[i]) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            return "-1";
+        } else {
+            return count;
+        }
+    }
+
+        let size = parseInt(prompt("Input the length of array: "));
+        let array = [];
+        for (let i = 0; i < size; i++)  {
+            array[i] = prompt("Input Character: ");
+        }
+        let input = prompt("Input character you guess: ");
+        result = check(input, array);
+        document.write("The appear of charater in this array is: "+result);
+
+</script>
+</body>
+</html>

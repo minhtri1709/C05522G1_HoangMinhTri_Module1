@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tăng giá trị đối số</title>
+</head>
+<body>
+<button onclick="increaseNumber()">Click Here</button>
+</body>
+<script>
+
+    function increaseNumber() {
+        number++;
+        return number;
+        // document.write(number);
+    }
+
+    let number = parseFloat(prompt("Input Number:"));
+    let result = increaseNumber(number);
+    document.write(result);
+
+
+</script>
+</html>

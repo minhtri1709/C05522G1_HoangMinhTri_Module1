@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayStar = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arrayValueOfStar = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+
+
+    function search() {
+        let index = 0;
+        for (let i = 0; i < arrayStar.length; i++) {
+            if (nameStar === arrayStar[i]) {
+                alert("Name of star is:" + " " + arrayStar[i] + " " + arrayValueOfStar[i]);
+                index++;
+            }
+        }
+        if (index === 0) {
+            alert("None of star you input can find in this page.");
+        }
+    let nameStar = prompt("Input name of Star:");
+    search();
+
+
+
+</script>
+
+</body>
+</html>

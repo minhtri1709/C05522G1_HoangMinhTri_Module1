@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng</title>
+</head>
+<body>
+<script>
+    function change(a) {
+        let first = 0;
+        let b;
+        let last = a.length - 1;
+       while (first<last){
+            b = a[first];
+            a[first] = a[last];
+            a[last] = b;
+            first++;
+            last--;
+        }
+    }
+
+        let size = parseInt(prompt("Input the length of array: "));
+        let array = [];
+        for (let i = 0; i < size; i++) {
+            array[i] = parseFloat(prompt("Input Number: "));
+        }
+       change(array);
+        document.write(array.join(" "));
+</script>
+</body>
+</html>

@@ -6,18 +6,24 @@
 </head>
 <body>
 <script>
-    let number = 2;
+    let number = parseInt(prompt("Input number : "));
     let count = 0;
-    while (count < 20) {
-        let divisor = 0;
-        for (let i = 1; i <= number; i++) {
-            if (number % i === 0) {
-                divisor++
+    let divisor = 0;
+    for (let i = 2; i < 1000; i++) {
+        if (count < number) {
+            for (let j = 1; j <= i; j++) {
+                if (i % j === 0) {
+                    divisor += 1;
+                }
             }
-        }if (divisor === 2) {
-            document.write(number + "<br>")
-            count++
-        }number++
+            if (divisor === 2) {
+                document.write(i + "<br>");
+                count += 1;
+            }
+            divisor = 0;
+        } else {
+            break;
+        }
     }
 </script>
 

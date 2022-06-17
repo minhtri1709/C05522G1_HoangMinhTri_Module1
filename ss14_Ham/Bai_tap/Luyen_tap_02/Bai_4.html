@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự</title>
+</head>
+<body>
+<script>
+    function checkCharacter(i) {
+        if (parseFloat(i) % parseFloat(i) === 0 || parseFloat(i) === 0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    let string = prompt("Input anything you want:");
+    let result = checkCharacter(string);
+    document.write("This is:" + " " + result );
+</script>
+</body>
+</html>
