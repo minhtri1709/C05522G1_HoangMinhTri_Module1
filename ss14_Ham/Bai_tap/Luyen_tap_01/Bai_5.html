@@ -6,12 +6,11 @@
 </head>
 <body>
 <script>
-    let arrayStar = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
-    let arrayValueOfStar = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
 
 
-
-    function search() {
+    function search(nameStar) {
+        let arrayStar = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arrayValueOfStar = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
         let index = 0;
         for (let i = 0; i < arrayStar.length; i++) {
             if (nameStar === arrayStar[i]) {
@@ -22,9 +21,10 @@
         if (index === 0) {
             alert("None of star you input can find in this page.");
         }
-    let nameStar = prompt("Input name of Star:");
-    search();
 
+    }
+    let nameStar = prompt("Input name of Star:");
+    search(nameStar);
 
 
 </script>
