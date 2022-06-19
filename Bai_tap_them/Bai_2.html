@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let index = parseFloat(prompt("Input length of your array you want: "));
+    let number = [];
+    let numberDifference = [];
+    let appear = [];
+    for (let i = 0; i < index; i++) {
+        number[i] = parseFloat(prompt("Input Number:"));
+        console.log(number);
+    }
+
+    function showAppear(arr1, arr2, arr3) {
+        for (let i = 0; i < arr1.length; i++) {
+            let position = arr2.indexOf(arr1[i]);
+            if (position === -1) {
+                arr2.push(arr1[i]);
+                arr3.push(1);
+            } else {
+                arr3[position] = arr3[position] + 1;
+            }
+        }
+        for (let index in arr2) {
+            document.write(arr2[index] + "-" + arr3[index] + " appear" + "<br>")
+        }
+
+    }
+
+    result = showAppear(number, numberDifference, appear);
+
+
+</script>
+</body>
+</html>
