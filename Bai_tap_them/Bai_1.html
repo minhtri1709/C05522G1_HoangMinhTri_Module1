@@ -6,47 +6,26 @@
 </head>
 <body>
 <script>
-    let number = parseFloat(prompt("Input Number:"));
-    let primeNumber = [];
-    let output = [];
-
-    function show(a, array1) {
-        let count = 0;
-        let divisor = 0;
-        for (let i = 2; i < 1000; i++) {
-            if (count < a) {
-                for (let j = 1; j <= i; j++) {
-                    if (i % j === 0) {
-                        divisor += 1;
-                    }
+    function displayPrime(number) {
+        let index = 1;
+        let result = 0 + "<br>";
+        while (index <= number) {
+            let divisor = 0;
+            for (let i = 1; i <= index; i++) {
+                if (index % i === 0) {
+                    divisor++;
                 }
-                if (divisor === 2) {
-                    array1.push(i);
-                    count += 1;
-                }
-                divisor = 0;
-            } else {
-                break;
             }
+            if (divisor !== 2) {
+                result += index + "<br>";
+            }
+            index++;
         }
+        return result;
     }
 
-    let demo = show(number, primeNumber);
-    console.log(demo);
-
-    function compare(b, array2, array3) {
-        for (let i = 0; i < b; i++) {
-            if (b !== array2[i]) {
-                array3.push(b);
-            } else {
-                break;
-            }
-        }
-    }
-
-    let result = compare(number,primeNumber,output);
-    console.log(result);
-    document.write(result);
+    let number = +prompt("Input a Number: ");
+    document.write(displayPrime(number));
 
 </script>
 </body>

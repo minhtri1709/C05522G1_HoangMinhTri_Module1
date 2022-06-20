@@ -6,23 +6,26 @@
 </head>
 <body>
 <script>
-    function isPrime() {
-        let count = 0;
-        for (let i = 0; i <= number; i++) {
-            if (number % i === 0) {
-                count++;
+    function isPrime(value) {
+        let divisor = 0;
+        for (let i = 0; i <= value; i++) {
+            if (value % i === 0) {
+                divisor++;
             }
         }
-        if (count === 2) {
-            return "This is a Prime Number."
+        if (divisor === 2) {
+            return true;
         } else {
-            return "This is not a Prime Number"
+            return false;
         }
     }
 
     let number = parseFloat(prompt("Input Number:"));
-    let result = isPrime(number);
-    document.write(result);
+    for (let i =0;i<number;i++){
+        if(isPrime(i)===false){
+            document.write(i)
+        }
+    }
 </script>
 </body>
 </html>
