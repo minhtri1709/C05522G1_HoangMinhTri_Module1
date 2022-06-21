@@ -28,7 +28,7 @@
 
     }
 
-    let hero = new Hero("https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg", 20, 30, 200);
+    let hero = new Hero("https://congluan-cdn.congluan.vn/files/content/2022/06/19/vo-sy-quyen-anh-buc-vi-cau-thu-mu-qua-phu-thuoc-ronaldo-091137337.jpg", 20, 30, 200);
 
     function start() {
         if (hero.left < window.innerWidth - hero.size) {
@@ -36,7 +36,7 @@
         }
 
         document.getElementById('game').innerHTML = hero.getHeroElement();
-        setTimeout(start, 300);
+        setTimeout(start, 200);
     }
 
     start();
