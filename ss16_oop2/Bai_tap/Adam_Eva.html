@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        };
+
+        isEmty() {
+            if (this.weight === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decreaseApple() {
+            if (this.isEmty()) {
+                alert("It's out of Apple.")
+            } else {
+                this.weight--;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        isMale() {
+            if (this.gender === 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getGender() {
+            if (this.isMale()) {
+                return "Male";
+            } else {
+                return "Female";
+            }
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        checkApple(Apple) {
+            return apple.isEmty();
+        }
+
+        say(string) {
+            console.log(string);
+        }
+
+        eat(apple) {
+            if (apple.getWeight() > 0) {
+                apple.decreaseApple();
+                this.weight++
+            } else {
+                alert("It's out of apple.")
+            }
+        }
+
+        getInfo(human) {
+            alert(human.name + " " + human.getGender() + " " + human.weight);
+        }
+    }
+
+    let adam = new Human("Adam", 1, 70);
+    let eva = new Human("Eva", 2, 55);
+    let apple_1 = new Apple(10);
+
+    while (apple_1.isEmty() !== true) {
+        document.write("Adam eating the apple" + "<br>")
+        adam.eat(apple_1);
+
+        document.write("The apple have " + "<br>");
+        document.write(apple_1.getWeight() + " one" + "<br>");
+        document.write("The weight of Adam is " + adam.getWeight() + "kg" + "<br>");
+
+        document.write("<br>")
+
+        document.write("Eva eating the apple" + "<br>");
+        eva.eat(apple_1);
+
+        document.write("The apple have" + "<br>");
+        document.write(apple_1.getWeight() + " one" + "<br>");
+        document.write("The weight of Eva is " + eva.getWeight() + "kg" + "<br>");
+
+    }
+</script>
+</body>
+</html>
