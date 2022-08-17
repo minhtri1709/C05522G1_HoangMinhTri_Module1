@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lengthArray = parseFloat(prompt("Input the length of numerators array: "));
+    let numerators = [];
+    let denominators = [];
+    for (let i = 0; i < lengthArray; i++) {
+        numerators[i] = parseFloat(prompt("Input numerators: "));
+        denominators[i] = parseFloat(prompt("Input denominators: "));
+    }
+
+
+    let maxFraction = numerators[0] / denominators[0];
+    let numerator = numerators[0];
+    let denominator = denominators[0];
+    let index = 0;
+
+    for (let i = 1; i < numerators.length; i++){
+        if (numerators[i] / denominators[i] > maxFraction){
+            maxFraction = numerators / denominators;
+            index = i;
+            numerator = numerators[i];
+            denominator = denominators[i];
+        }
+    }
+    document.write("The biggest Fraction is: " + numerator / denominator + " and the index is: "+ index)
+
+</script>
+</body>
+</html>

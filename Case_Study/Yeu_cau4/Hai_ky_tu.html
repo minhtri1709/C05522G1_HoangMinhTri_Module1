@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputFirst = prompt("Input the first string: ");
+    let inputSecond = prompt("Input the second string: ");
+    let arrayNew = [];
+    let count = 0;
+
+    for (let i = 0; i < inputFirst.length; i++){
+        for (let j = 0; j < inputSecond.length; j++){
+            if(inputFirst[i] === inputSecond[j]){
+                count++;
+                arrayNew.push(inputFirst[i])
+            }
+        }
+    }
+    document.write("String first and second have: " + count + "  repeats" + " and the same character is: " + arrayNew);
+</script>
+</body>
+</html>

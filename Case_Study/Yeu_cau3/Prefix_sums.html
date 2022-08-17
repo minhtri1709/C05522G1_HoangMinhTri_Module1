@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+     let inputArr = parseFloat(prompt("Input the length of the array: "));
+     let numberArr = [];
+     let prefixArr = [];
+     for (let i = 0; i < inputArr; i++){
+         numberArr [i] = parseFloat(prompt("Input"));
+     }
+     let sum = 0;
+     for (let j = 0; j < numberArr.length; j++){
+         sum = sum + numberArr[j];
+         prefixArr[j] = sum
+     }
+     document.write("The result is : " + prefixArr)
+</script>
+</body>
+</html>

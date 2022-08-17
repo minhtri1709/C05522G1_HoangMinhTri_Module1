@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let menu = ["Coffee", "Orange juice", "Carrot juice", "Tomato juice", "Water", "Coconut"];
+    let price = ["100", "200", "300", "400", "500", "600"];
+    let total = 0;
+    let option;
+    let count = 0;
+    do {
+        alert("1 - Coffe\n2 - Orange juice\n3 - Carrot juice\n4 - Tomato juice\n5 - Water\n6 - Coconut\n7 - Exit");
+        option = parseFloat(prompt("Input your choice by number: "));
+        if (option !== 7) {
+            for (let i = 0; i < menu.length; i++) {
+                if (i === option - 1) {
+                    alert("Your choice is: " + menu[i] + "and price is " + price[i] + "VND")
+                    let number = parseFloat(prompt("Input your buys: "));
+                    count++;
+                    document.write("Your order is " + count + "and your price is: " + price[i] * number + "<br>")
+                    total += price[i] * number;
+                }
+            }
+            alert("again");
+        } else {
+            alert("Thanks you for your comming! ");
+        }
+    } while (option !== 7)
+    document.write("Your total-bill is: " + total + "VND")
+</script>
+</body>
+</html>

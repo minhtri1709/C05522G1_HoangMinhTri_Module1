@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let col = parseInt(prompt("Input number of the collum: "));
+    let row = parseInt(prompt("Input number of the row: "));
+    let matrix = [];
+
+    for (let i = 0; i < row; i++) {
+        document.write("[");
+        let array = [];
+        for (let j = 0; j < col; j++) {
+            array[j] = parseInt(prompt("Input number: "));
+            document.write(array[j]);
+        }
+        document.write("]" + "<br>");
+        matrix[i] = array;
+    }
+
+    function sumEvenNumber(arr) {
+        let total = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[i][j] % 2 === 0) {
+                    total += arr[i][j];
+                }
+            }
+        }
+        return total;
+    }
+    let result = sumEvenNumber(matrix);
+    document.write(result)
+</script>
+</body>
+</html>

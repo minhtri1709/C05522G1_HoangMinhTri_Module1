@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let col;
+    let row = parseInt(prompt("Input number of the row: "));
+    let arrayB = [];
+
+    for (let i = 0; i < row; i++) {
+        col = parseInt(prompt("Input number of the collum: "));
+        document.write("[");
+        let array = [];
+        for (let j = 0; j < col; j++) {
+            array[j] = parseInt(prompt("Input number: "));
+            document.write(array[j]);
+        }
+        document.write("]" + "<br>");
+        arrayB[i] = array;
+    }
+
+    function countPrime(array) {
+        let arrayPrime = [];
+
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                let devisor = 0;
+                for (let k = 1; k <= array[i][j]; k++) {
+                    if (array[i][j] % k === 0) {
+                        devisor++;
+                    }
+                }
+                if (devisor === 2) {
+                    arrayPrime.push(array[i][j]);
+                }
+            }
+        }
+        return arrayPrime;
+    }
+
+    document.write("Prime Number is: " + countPrime(arrayB) + "<br>");
+    document.write("Repeat: " + countPrime(arrayB).length)
+</script>
+</body>
+</html>

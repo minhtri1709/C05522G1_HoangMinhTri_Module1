@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="display"></p>
+<script>
+    class People {
+        constructor(index, name, age, adress, phone) {
+            this._index = index;
+            this._name = name;
+            this._age = age;
+            this._adress = adress;
+            this._phone = phone;
+        }
+
+        getIndex() {
+            return this._index;
+        }
+
+        setIndex(value) {
+            this._index = value;
+        }
+
+        getName() {
+            return this._name;
+        }
+
+        setName(value) {
+            this._name = value;
+        }
+
+        getAge() {
+            return this._age;
+        }
+
+        setAge(value) {
+            this._age = value;
+        }
+
+        getAdress() {
+            return this._adress;
+        }
+
+        setAdress(value) {
+            this._adress = value;
+        }
+
+        getPhone() {
+            return this._phone;
+        }
+
+    }
+
+    let sickPeople1 = new People("1", "Nguyễn Lê Hoàng Oanh", "20", "Quảng Nam", "0923434546");
+    let sickPeople2 = new People("2", "Nguyễn Trần Cảnh", "30", "Quảng Nam", "0943246324");
+    let sickPeople3 = new People("3", "Hoàng Thanh Hùng", "15", "Quảng Nam", "0123451235");
+    let sickPeople4 = new People("4", "Trần Lệ Quyên", "19", "Quảng Nam", "0923093748");
+    let array = [sickPeople1, sickPeople2, sickPeople3, sickPeople4];
+
+    function display(array) {
+        let sout = "<table border=\"1px\">\n" +
+            "    <tr>\n" +
+            "        <th>STT</th>\n" +
+            "        <th>Họ và tên</th>\n" +
+            "        <th>Tuổi</th>\n" +
+            "        <th>Địa chỉ</th>\n" +
+            "        <th>Số điện thoại</th>\n" +
+            "    </tr>";
+        for (let i = 0; i < array.length; i++) {
+            sout += "<tr>" +
+                "<td>" + array[i].getIndex() + "</td>" +
+                "<td>" + array[i].getName() + "</td>" +
+                "<td>" + array[i].getAge() + "</td>" +
+                "<td>" + array[i].getAdress() + "</td>" +
+                "<td>" + array[i].getPhone() + "</td>" +
+                "<td>" +
+                "</tr>"
+        }
+        sout += "</table>";
+        document.getElementById("display").innerHTML = sout;
+    }
+
+    display(array);
+</script>
+</body>
+</html>

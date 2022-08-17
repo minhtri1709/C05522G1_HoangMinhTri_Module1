@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputNumber = parseInt(prompt("Input your number: "));
+
+    if (inputNumber > 0 && inputNumber % inputNumber === 0) {
+        for (let i = 0; i <= inputNumber; i++) {
+            if (inputNumber % i === 0) {
+                document.write("The divisor of your number is: " + i + "<br>");
+            }
+        }
+    } else {
+        alert("Input your number again! ");
+    }
+</script>
+</body>
+</html>

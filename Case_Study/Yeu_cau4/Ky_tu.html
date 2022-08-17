@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function editString(array) {
+        array[0] = array[0].toLowerCase();
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] !== '' && array[i - 1] === '') {
+                array[i] = array[i].toUpperCase();
+            }
+            if (array[i] === '' && array[i - 1] === '') {
+                array.splice(i, 1);
+            }
+        }
+        return array.join('');
+    }
+
+    function findLonggestWord(string) {
+        let array = [];
+        let array1 = string.split(' ').sort(function (a, b) {
+            return b.length - a.length;
+        });
+        let max = array1[0].length;
+        for (let i = 0; i < array1.length; i++) {
+            if (array1[i].length === max) {
+                array.push(array1[i]);
+            }
+        }
+        return array;
+    }
+
+    function main() {
+        let string = prompt("Input anything: ");
+        let word = string.toLowerCase().trim();
+        let array = word.split(' ');
+        document.write('String before edit: ' + string + '<br>');
+        document.write('String after edit: ' + editString(array) + '<br>');
+        document.write('The most character in string is: ' + findLonggestWord(editString(array)) + ' ,this has: ' + findLonggestWord(editString(array))[0].length + ' character');
+    }
+
+    main();
+
+
+
+</script>
+</body>
+</html>

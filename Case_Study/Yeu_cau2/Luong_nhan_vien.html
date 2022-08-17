@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let income = parseInt(prompt("Input your salary :"));
+    let rank1 = income < 7000000;
+    let rank2 = income < 15000000 && income >= 7000000;
+    let rank3 = income >= 15000000;
+    switch (true) {
+        case rank1:
+            alert("Your income Tax:" + income * 0.05 + "VND")
+            alert("Your net salary: " + (income - income * 0.05));
+            break;
+        case rank2:
+            alert("Your income Tax:" + income * 0.1 + "VND");
+            alert("Your net salary: " + (income - income * 0.1));
+            break;
+        case rank3:
+            alert("Your income Tax: " + income * 0.2 + "VND");
+            alert("Your net salary: " + (income - income * 0.2));
+            break;
+    }
+</script>
+</body>
+</html>

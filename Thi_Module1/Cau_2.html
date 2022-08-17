@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayLength = parseInt(prompt("Input length of your array: "));
+    let arrayNumber = [];
+
+    for (let i = 0; i < arrayLength; i++) {
+        arrayNumber[i] = parseInt(prompt("Input number: "));
+    }
+
+
+    function appear(array) {
+        let arrayFirst = [];
+        let max = array[0];
+        let min = array[0];
+        for (let i = 0; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+            }
+            if (min > array[i]) {
+                min = array [i];
+            }
+        }
+        arrayFirst.push(array.indexOf(min));
+        arrayFirst.push(array.indexOf(max));
+
+        return arrayFirst;
+
+    }
+
+    let result = appear(arrayNumber);
+
+    document.write("The result is: " + result);
+
+</script>
+</body>
+</html>

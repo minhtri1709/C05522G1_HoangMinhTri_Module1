@@ -11,12 +11,14 @@
     let nextTerm = 0;
     for (let i = 0; i < 1000; i++) {
         nextTerm = number1 + number2;
-        if (nextTerm % 5 == 0) {
-            document.write("Đây là số chia hết cho 5:" + nextTerm + "<br>");
-        }
         number1 = number2;
         number2 = nextTerm;
+        if (nextTerm % 5 === 0) {
+            document.write("Đây là số chia hết cho 5:" + nextTerm + "<br>");
+            break;
+        }
     }
+
 </script>
 
 </body>

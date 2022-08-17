@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+   let lengthFirst = parseFloat(prompt("Input the first length array: "));
+   let arrayFirst = [];
+   for (let i = 0; i < lengthFirst; i++) {
+       arrayFirst[i] = parseFloat(prompt("Input Number: "));
+   }
+
+   let lengthSecond = parseFloat(prompt("Input the second length array: "));
+   let arraySecond = [];
+   for (let j = 0; j < lengthSecond; j++) {
+       arraySecond[j] = parseFloat(prompt("Input Number: "));
+   }
+
+   let arrayThird = [];
+   let arrayFour = [];
+
+   for (let i = 0; i < arraySecond.length; i++) {
+       let count = 0;
+       for (let j = 0; j < arrayFirst.length; j++) {
+           if (arraySecond[i] === arrayFirst[j]) {
+               count++;
+               break;
+           }
+       }
+       if (count === 0) {
+           arrayThird.push(arraySecond[i]);
+       }
+   }
+
+   for (let i = 0; i < arrayThird.length; i++) {
+       let count1 = 0;
+       for (let j = 0; j < arrayFour.length; j++) {
+           if (arrayThird[i] === arrayFour[j]) {
+               count1++;
+           }
+       }
+       if (count1 === 0) {
+           arrayFour.push(arrayThird[i])
+
+       }
+   }
+   document.write(" The result is: " + arrayFour)
+
+
+</script>
+
+</body>
+</html>

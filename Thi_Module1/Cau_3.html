@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayLength = parseInt(prompt("Input the length of your array: "));
+    let arrayNumber = [];
+    let newArray = [];
+
+    for (let i = 0; i < arrayLength; i++) {
+        arrayNumber[i] = parseInt(prompt("Input number in the array: "));
+    }
+
+    let inputNumber = parseInt(prompt("Input number: "));
+
+    for (let j = 0; j < arrayNumber.length; j++) {
+        let position = newArray.indexOf(arrayNumber[j]);
+        if (position === -1) {
+            newArray.push(arrayNumber[j]);
+        }
+    }
+
+    function devide(array, number) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % number === 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    let result = devide(newArray, inputNumber);
+
+    document.write("The result is: " + result);
+</script>
+</body>
+</html>
